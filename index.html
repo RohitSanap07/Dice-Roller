@@ -4,9 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Roller</title>
+<style>
+
+body{
+    background-color: rgb(255, 218, 174);
+}
+</style>
 </head>
 <body>
-    <img src="dice.png"/>
-    
+    <div>
+    <img src="dice.png" class="img-dice" id="img-dice" />
+
+    <button onclick="roll()">Dice Roll</button>
+    </div>
+
+<script>
+function roll(){
+    const randomNumber = Math.floor(Math.random() *(7-1)) + 1
+    const imgElement = document.getElementById("img-dice")
+
+switch(randomNumber){
+        case 1:
+        imgElement.src="dice 1.png"
+        break
+        case 2:
+        imgElement.src="dice 2.png"
+        break
+        case 3:
+        imgElement.src="dice 3.png"
+        break
+        case 4:
+        imgElement.src="dice 4.png"
+        break
+        case 5:
+        imgElement.src="dice 5.png"
+        break
+        case 6:
+        imgElement.src="dice 6.png"
+        break
+
+}
+}
+
+</script>
+
 </body>
 </html>
